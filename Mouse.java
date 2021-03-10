@@ -5,6 +5,7 @@ public class Mouse extends JPanel implements MouseListener{
     boolean clicked;
     boolean pressed;
     int x, y;
+    
     public Mouse(){
         clicked = false;
         pressed = false;

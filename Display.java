@@ -22,8 +22,17 @@ public class Display extends drawInterface {
     
     int tx, ty = 0;
     
+    int x = 400;
+    int y = 300;
+    
     public Display(Game g, Mouse m, Keyboard k, MoveMouse mmw, Frame frm) {
         super();
+        
+        game = g;
+        mouse = m;
+        kb = k;
+        mm = mmw;
+        frame = frm;
     }
     
     public void draw(){
@@ -46,8 +55,24 @@ public class Display extends drawInterface {
         
         //Your code goes here!
         
+        //
+        
+        /*if (y < 720) {
+            y += 1;
+        }
+        
+        if (x < 1080) {
+            x += 1;
+        }*/
+        
         fill(255, 0, 0, g);
-        rect(500, 500, 100, 100, g, 0, 0);
+        
+        if (mouse.clicked == true) {
+            fill(0, 255, 0, g);
+        }
+        
+        rect(x, y, 200, 100, g, 0, 0);
+        
         //This example draws a red rectangle on the screen.
         
     }
